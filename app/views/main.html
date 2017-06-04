@@ -1,23 +1,37 @@
-<div class="jumbotron">
+<!-- <div class="jumbotron">
   <h1>'Allo, 'Allo!</h1>
   <p class="lead">
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>
     Always a pleasure scaffolding your apps.
   </p>
   <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+</div> -->
 
 <div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+  <div class="row text-center">
+    <h4>Now</h4>
+    <p>
+      NaN km/h
+    </p>
+  </div>
+  <div class="row text-center">
+    <h4>People near me</h4>
+  </div>
+  <div class="row text-center">
+    <h4>Events near me</h4>
+  </div>
+  <div class="row text-center">
+    <h4>My Achievements</h4>
+    <p>NaN XP</p>
+  </div>
+  <div class="row text-center">
+    <h4>Leaderboard</h4>
+  </div>
 </div>
+<oauth
+  site="http://oauth-ng-server.herokuapp.com"
+  client-id="d6d2b510d18471d2e22aa202216e86c42beac80f9a6ac2da505dcb79c7b2fd99"
+  redirect-uri="http://localhost:9000"
+  profile-uri="http://oauth-ng-server.herokuapp.com/api/v1/me"
+  scope="public">
+</oauth>
