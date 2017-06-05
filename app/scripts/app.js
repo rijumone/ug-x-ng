@@ -17,7 +17,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'oauth'
+    // 'oauth'
   ])
   .config(function ($routeProvider,$locationProvider) {
     $routeProvider
