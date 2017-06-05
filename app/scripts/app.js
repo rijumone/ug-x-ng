@@ -17,9 +17,10 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ezfb',
     // 'oauth'
   ])
-  .config(function ($routeProvider,$locationProvider) {
+  .config(function ($routeProvider,$locationProvider,ezfbProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -36,4 +37,13 @@ angular
       });
     $locationProvider.hashPrefix('');
     // $locationProvider.html5mode(true).hashPrefix('!');
+    ezfbProvider.setInitParams({
+      // This is my FB app id for plunker demo app
+      appId: '386469651480295',
+
+      // Module default is `v2.6`.
+      // If you want to use Facebook platform `v2.3`, you'll have to add the following parameter.
+      // https://developers.facebook.com/docs/javascript/reference/FB.init
+      version: 'v2.3'
+    });  
   });
