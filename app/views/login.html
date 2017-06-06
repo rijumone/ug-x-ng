@@ -1,0 +1,11 @@
+<p>This is the login view.</p>
+<button id="login-btn" ng-click="loginToggle()">
+	<span ng-if="status">Logout</span>
+	<span ng-if="!status">Login</span>
+</button>
+<span ng-if="status" class="message">
+	You are <strong>Logged in</strong> as <em>{{user.name}}</em>
+</span>
+<span ng-if="!status" class="message">
+	You are <strong>not</strong> logged in.
+</span>
