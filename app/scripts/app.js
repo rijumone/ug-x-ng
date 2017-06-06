@@ -42,26 +42,17 @@
     redirectTo: '/'
   });
   $locationProvider.hashPrefix('');
-    // $locationProvider.html5mode(true).hashPrefix('!');
-    /*ezfbProvider.setInitParams({
-      // This is my FB app id for plunker demo app
-      appId: '386469651480295',
-
-      // Module default is `v2.6`.
-      // If you want to use Facebook platform `v2.3`, you'll have to add the following parameter.
-      // https://developers.facebook.com/docs/javascript/reference/FB.init
-      version: 'v2.3'
-    });*/  
-    $facebookProvider.setAppId('571841429643733').setPermissions(['email','user_friends']);
-  }).run(['$rootScope', '$window', function($rootScope, $window) {
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    $rootScope.$on('fb.load', function() {
-      $window.dispatchEvent(new Event('fb.load'));
-    });
-  }]);
+  
+  $facebookProvider.setAppId('571841429643733').setPermissions(['email','user_friends']);
+}).run(['$rootScope', '$window', function($rootScope, $window) {
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  $rootScope.$on('fb.load', function() {
+    $window.dispatchEvent(new Event('fb.load'));
+  });
+}]);
